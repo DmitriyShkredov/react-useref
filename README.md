@@ -1,6 +1,6 @@
-# React useContext
+# React useRef
 
-### `git clone https://github.com/DmitriyShkredov/react-usecontext.git`
+### `git clone https://github.com/DmitriyShkredov/react-useref.git`
 
 ### `npm install`
 
