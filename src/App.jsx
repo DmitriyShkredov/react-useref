@@ -1,21 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useRef, useEffect } from "react";
 
 function App() {
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    inputRef.current.focus();
+  };
+
+  useEffect(() => {
+    console.log("render");
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Типичный веб разработчик</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React Hook useRef
-        </a>
-      </header>
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Click</button>
     </div>
   );
 }
